@@ -31,9 +31,17 @@ const categories = [
   "Healthcare",
   "Education",
   "Travel",
+  "Groceries",
+  "Rent",
+  "Insurance",
+  "Gym & Fitness",
+  "Subscriptions",
+  "Gifts & Donations",
+  "Pets",
   "Salary",
   "Freelance",
   "Investment",
+  "Business",
   "Other",
 ];
 
@@ -240,7 +248,7 @@ const Transactions = () => {
                       </TableCell>
                       <TableCell className="text-right font-semibold">
                         <span className={transaction.type === "income" ? "text-success" : "text-destructive"}>
-                          {transaction.type === "income" ? "+" : "-"}${transaction.amount.toFixed(2)}
+                          {transaction.type === "income" ? "+" : "-"}₹{transaction.amount.toFixed(2)}
                         </span>
                       </TableCell>
                       <TableCell className="text-right">

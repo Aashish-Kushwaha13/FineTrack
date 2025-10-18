@@ -88,7 +88,16 @@ const Dashboard = () => {
     return acc;
   }, []);
 
-  const COLORS = ["#8b5cf6", "#ec4899", "#f59e0b", "#10b981", "#3b82f6", "#ef4444"];
+  const COLORS = [
+    "hsl(var(--primary))",
+    "hsl(var(--success))",
+    "hsl(var(--warning))",
+    "hsl(var(--destructive))",
+    "hsl(262 83% 68%)",
+    "hsl(142 71% 55%)",
+    "hsl(38 92% 60%)",
+    "hsl(200 70% 50%)",
+  ];
 
   if (loading) {
     return (
@@ -110,7 +119,7 @@ const Dashboard = () => {
               <TrendingUp className="h-4 w-4 text-success" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-success">${totalIncome.toFixed(2)}</div>
+              <div className="text-2xl font-bold text-success">₹{totalIncome.toFixed(2)}</div>
             </CardContent>
           </Card>
 
@@ -120,7 +129,7 @@ const Dashboard = () => {
               <TrendingDown className="h-4 w-4 text-destructive" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-destructive">${totalExpense.toFixed(2)}</div>
+              <div className="text-2xl font-bold text-destructive">₹{totalExpense.toFixed(2)}</div>
             </CardContent>
           </Card>
 
@@ -131,7 +140,7 @@ const Dashboard = () => {
             </CardHeader>
             <CardContent>
               <div className={`text-2xl font-bold ${balance >= 0 ? 'text-success' : 'text-destructive'}`}>
-                ${balance.toFixed(2)}
+                ₹{balance.toFixed(2)}
               </div>
             </CardContent>
           </Card>

@@ -27,9 +27,17 @@ const categories = [
   "Healthcare",
   "Education",
   "Travel",
+  "Groceries",
+  "Rent",
+  "Insurance",
+  "Gym & Fitness",
+  "Subscriptions",
+  "Gifts & Donations",
+  "Pets",
   "Salary",
   "Freelance",
   "Investment",
+  "Business",
   "Other",
 ];
 

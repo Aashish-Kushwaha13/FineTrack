@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { useTheme } from "next-themes";
+import logo from "@/assets/logo.png";
 
 interface LayoutProps {
   children: ReactNode;
@@ -37,7 +38,7 @@ const Layout = ({ children }: LayoutProps) => {
       <header className="sticky top-0 z-50 w-full border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
         <div className="container flex h-16 items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-purple-600" />
+            <img src={logo} alt="Expense Tracker Logo" className="h-10 w-10" />
             <span className="text-xl font-bold">Expense Tracker</span>
           </Link>
           

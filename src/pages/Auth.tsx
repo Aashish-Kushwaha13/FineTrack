@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
+import userIcon from "@/assets/user-icon.png";
 
 const authSchema = z.object({
   email: z.string().email("Invalid email address"),
@@ -119,7 +120,7 @@ const Auth = () => {
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-background via-muted to-accent p-4">
       <Card className="w-full max-w-md shadow-xl">
         <CardHeader className="space-y-1 text-center">
-          <div className="mx-auto mb-4 h-12 w-12 rounded-xl bg-gradient-to-br from-primary to-purple-600" />
+          <img src={userIcon} alt="User" className="mx-auto mb-4 h-16 w-16" />
           <CardTitle className="text-2xl font-bold">
             {isLogin ? "Welcome Back" : "Create Account"}
           </CardTitle>
